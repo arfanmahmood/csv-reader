@@ -6,5 +6,20 @@
 </head>
 
 <body>
+<?php
+if (($handle = fopen("file.csv", "r")) !== FALSE) {
+	
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+		
+        for ($c=0; $c < count($data); $c++) {
+            echo $data[$c].' ';
+        }
+		
+		 echo "<br />\n";
+		
+    }
+    fclose($handle);
+}
+?>
 </body>
 </html>
