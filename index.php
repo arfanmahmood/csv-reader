@@ -15,7 +15,7 @@ if (($handle = fopen("file.csv", "r")) !== FALSE) {
             echo $data[$c].' ';
         }
 		
-		 echo "<br />\n";
+		echo "<br />\n";
 		
     }
     fclose($handle);
